@@ -80,17 +80,6 @@ strong{color:var(--ink);font-weight:700}
 .intro{margin-top:22px;font-size:16px;line-height:1.65;color:var(--body);max-width:34em}
 .head{margin-bottom:48px}
 
-/* Job Fit */
-.fit{display:grid;gap:10px;list-style:none}
-.fit li{display:grid;grid-template-columns:minmax(220px,1fr) 2fr 132px;gap:10px 32px;align-items:center;background:var(--grey);border-radius:4px;padding:24px 28px}
-.fit h3{font-size:17px;font-weight:700;color:var(--ink);line-height:1.45}
-.fit h3 small{display:block;margin-bottom:4px;font-size:12px;font-weight:700;color:var(--blue)}
-.fit p{font-size:15.5px}
-.fit a{justify-self:end;font-size:14px;font-weight:700;color:var(--blue);white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
-.fit a svg{width:14px;height:14px}
-.fit a:hover{text-decoration:underline}
-@media (max-width:760px){.fit li{grid-template-columns:1fr;padding:22px}.fit a{justify-self:start}}
-
 /* 프로젝트 카드 */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .card{position:relative;overflow:hidden;border-radius:var(--r-card);min-height:clamp(440px,38vw,520px);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,2.6vw,36px);background:#0b1220}
@@ -177,28 +166,6 @@ figcaption{margin-top:10px;font-size:13.5px;line-height:1.5;color:var(--body)}
 .lessons p{margin-top:12px;font-size:15px}
 @media (max-width:900px){.lessons{grid-template-columns:1fr}}
 
-/* Design Rules */
-.rules{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.panel{background:var(--grey);border-radius:12px;padding:clamp(24px,3vw,40px)}
-.panel h3{font-size:16px;font-weight:700;color:var(--blue);margin-bottom:22px}
-.panel.wide{grid-column:1/-1}
-.panel p{font-size:15px}
-.sw{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.sw div{background:#fff;border-radius:8px;overflow:hidden;font-size:13px;line-height:1.45}
-.sw i{display:block;height:72px}
-.sw span{display:block;padding:10px 12px;color:var(--body)}
-.sw b{display:block;color:var(--ink);font-weight:700}
-.type p{display:flex;align-items:baseline;gap:18px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink)}
-.type p:first-child{padding-top:0}
-.type em{flex:none;width:118px;font-style:normal;font-size:12px;color:var(--body);font-variant-numeric:tabular-nums}
-.comps{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn{font:inherit;font-size:15px;font-weight:700;border:0;border-radius:4px;padding:12px 22px;background:var(--navy);color:#fff;cursor:pointer}
-.chip{display:inline-block;background:var(--blue);color:#fff;border-radius:8px;padding:8px 14px;font-size:15px}
-.pill-dark{display:inline-block;background:#1d2a3a;color:#fff;border-radius:var(--r-pill);padding:5px 13px;font-size:13px;font-weight:600;box-shadow:inset 0 0 0 1px rgba(255,255,255,.75)}
-.bp{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.bp span{background:#fff;border-radius:6px;padding:8px 12px;font-size:13.5px;color:var(--ink)}
-@media (max-width:760px){.rules{grid-template-columns:1fr}.sw{grid-template-columns:repeat(2,1fr)}}
-
 /* Other Works */
 .posts{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
 .post{background:var(--grey);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column}
@@ -237,9 +204,8 @@ footer a{color:#fff;font-weight:700;font-size:17px}
     <a class="brand" href="#" aria-label="처음으로"><b>김태현</b><small>Tae Hyun Kim</small></a>
     <nav aria-label="주요 메뉴">
       <ul class="nav">
-        <li><a href="#fit">JOB FIT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#rules">DESIGN RULES</a></li>
+        <li><a href="#works">OTHER WORKS</a></li>
         <li><a href="#about">ABOUT</a></li>
       </ul>
     </nav>
@@ -265,46 +231,11 @@ footer a{color:#fff;font-weight:700;font-size:17px}
         <span class="label">PROJECT 01</span>
         <h2>Thryve<br>의지가 약한 사람도 계속 쓰는 헬스 앱</h2>
       </a>
-      <a class="tile side-b" href="#fit">
-        <span class="label">JOB FIT</span>
+      <a class="tile side-b" href="#projects">
+        <span class="label">POSITION</span>
         <h2>현대오토에버 UX &amp; UI Designer<br>생성형 AI 서비스 운영 UI 디자인 지원</h2>
-        <p class="sm">담당업무와 해 본 일을 먼저 정리했습니다</p>
+        <p class="sm">프로젝트 세 개로 보여 드립니다</p>
       </a>
-    </section>
-
-    <!-- Job Fit -->
-    <section class="block" id="fit" aria-labelledby="fit-h">
-      <div class="head">
-        <h2 class="big" id="fit-h"><span>Job Fit</span></h2>
-        <p class="intro">공고의 담당업무를 어느 프로젝트에서 해 봤는지 정리했습니다. 오른쪽 링크를 누르면 해당 부분으로 이동합니다.</p>
-      </div>
-      <ul class="fit">
-        <li>
-          <h3><small>담당업무</small>서비스 아이덴티티 기반의 화면 구성 및 시각 디자인</h3>
-          <p>Thryve의 매니페스토에서 배지·색·서체 규칙을 정하고, "군사적으로 보인다"는 피드백으로 원칙과 어긋난 부분을 고쳤습니다. UoY App은 학교 공식 브랜드 컬러로 전 화면을 통일했습니다.</p>
-          <a href="#thryve-rules">Thryve 보기<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></a>
-        </li>
-        <li>
-          <h3><small>담당업무</small>반응형 웹·앱 UI 디자인 제작</h3>
-          <p>모바일 앱 세 개를 Adobe XD, Figma, React Native로 설계했습니다. 이 사이트는 직접 코드로 만들었고 PC·태블릿·모바일 화면에 맞춰 바뀝니다.</p>
-          <a href="#uoy">UoY App 보기<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></a>
-        </li>
-        <li>
-          <h3><small>담당업무</small>디자인 시스템 및 컴포넌트 라이브러리 설계·문서화</h3>
-          <p>Ignis Oasis 19쪽 가이드라인에 로고 최소 크기와 대체 서체 순서까지 정해 두었습니다. 이 사이트의 색·글자·컴포넌트 규칙도 따로 정리했습니다.</p>
-          <a href="#rules">규칙 보기<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></a>
-        </li>
-        <li>
-          <h3><small>담당업무</small>개발 협업을 위한 디자인 가이드 작성 및 커뮤니케이션</h3>
-          <p>Thryve를 React Native로 직접 빌드했습니다. 3D 파일 형식이 질감을 지우는 문제를 만나 실시간 3D 대신 영상 에셋으로 바꾼 판단을 기록했습니다.</p>
-          <a href="#thryve-build">빌드 보기<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></a>
-        </li>
-        <li>
-          <h3><small>필수역량</small>생성형 AI 서비스에 대한 관심과 사용 경험</h3>
-          <p>Claude·ChatGPT·Midjourney를 리서치와 시안 작업에 상시 씁니다. BudgetBills에서는 챗봇 화면을 과제형 테스트로 확인해, 답변마다 다른 탭으로 넘어가 흐름이 끊기는 문제를 찾았습니다.</p>
-          <a href="#bb-test">BudgetBills 보기<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></a>
-        </li>
-      </ul>
     </section>
 
     <!-- Projects -->
@@ -665,46 +596,6 @@ footer a{color:#fff;font-weight:700;font-size:17px}
         <li><h3>과제를 통과한 것과 문제를 푼 것은 다릅니다</h3><p>BudgetBills의 정산 과제는 3/3이었지만, 말을 꺼내는 부담은 그대로였습니다. 테스트 과제도 리서치 인사이트에 맞춰 설계해야 합니다.</p></li>
         <li><h3>아이콘은 이름과 함께 있어야 읽힙니다</h3><p>UoY App에서 피드백으로 처음 들었고, BudgetBills의 카드 추가 0/3으로 다시 확인했습니다. 이제는 아이콘에 이름을 붙이는 것을 기본값으로 둡니다.</p></li>
       </ul>
-    </section>
-
-    <!-- Design Rules -->
-    <section class="block" id="rules" aria-labelledby="rules-h">
-      <div class="head">
-        <h2 class="big" id="rules-h"><span>Design</span><span>Rules</span></h2>
-        <p class="intro">이 사이트를 만들 때 정한 규칙입니다. 현대오토에버 기업 사이트의 색과 간격을 측정해 기준으로 삼았습니다.</p>
-      </div>
-      <div class="rules">
-        <div class="panel wide">
-          <h3>색</h3>
-          <div class="sw">
-            <div><i style="background:#1F1F1F"></i><span><b>Ink</b>#1F1F1F · 제목</span></div>
-            <div><i style="background:#666666"></i><span><b>Body</b>#666666 · 본문</span></div>
-            <div><i style="background:#1472CF"></i><span><b>Blue</b>#1472CF · 강조·링크</span></div>
-            <div><i style="background:#002C5F"></i><span><b>Navy</b>#002C5F · 기본 버튼</span></div>
-            <div><i style="background:#F3F5F7;box-shadow:inset 0 -1px #E3E6EA"></i><span><b>Grey</b>#F3F5F7 · 면</span></div>
-          </div>
-        </div>
-        <div class="panel">
-          <h3>글자</h3>
-          <div class="type">
-            <p><em>Display 80 / 800</em><span style="font-family:var(--display);font-weight:800;font-size:34px;line-height:1">Projects</span></p>
-            <p><em>Lede 26 / 700</em><span style="font-size:22px;font-weight:700;letter-spacing:-.02em">한 줄 요약</span></p>
-            <p><em>Body 17 / 400</em><span style="color:var(--body)">본문은 회색으로 씁니다</span></p>
-            <p><em>Tag 12.5 / 600</em><span style="font-size:13px;font-weight:600">태그</span></p>
-          </div>
-        </div>
-        <div class="panel">
-          <h3>컴포넌트와 구간</h3>
-          <div class="comps">
-            <a class="cta" href="#rules">테두리 버튼</a>
-            <button class="btn" type="button">기본 버튼</button>
-            <span class="chip">강조 칩</span>
-            <span class="pill-dark">알약 태그</span>
-          </div>
-          <p style="margin-top:24px">카드 모서리 8px, 태그 모서리 50px. 화면 폭에 따라 세 구간으로 바뀝니다.</p>
-          <div class="bp"><span>980px 이하: 메뉴 숨김</span><span>900px 이하: 한 줄 배치</span><span>760px 이하: 표·카드 세로 전환</span></div>
-        </div>
-      </div>
     </section>
 
     <!-- Other Works -->
