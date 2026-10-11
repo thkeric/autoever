@@ -26,7 +26,7 @@ strong{color:var(--ink);font-weight:700}
 /* 헤더 */
 .top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .top .wrap{display:flex;align-items:center;gap:40px;height:84px}
-.brand{color:var(--navy);font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.brand{color:var(--navy);font-size:clamp(28px,3vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1}
 .top nav{margin-left:auto}
 .nav{display:flex;gap:34px;list-style:none}
 .nav a{font-size:15px;font-weight:700;color:var(--ink);white-space:nowrap}
@@ -43,8 +43,12 @@ strong{color:var(--ink);font-weight:700}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.72))}
 .tile > *:not(img){position:relative;z-index:1}
 .tile.main{grid-row:1/3}
-.tile.main > img{object-position:50% 40%;opacity:.9}
-.tile.main h1{font-size:clamp(28px,2.9vw,42px);font-weight:700;line-height:1.32;letter-spacing:-.03em}
+.tile.main{background:#0d0d0d}
+.tile.main > img{left:auto;right:0;width:64%;object-position:50% 30%}
+.tile.main::after{background:linear-gradient(90deg,#0d0d0d 34%,rgba(13,13,13,.55) 52%,rgba(13,13,13,0) 72%),linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.55))}
+.tile.main h1{max-width:none}
+.tile.main p{max-width:none}
+.tile.main h1{font-size:clamp(26px,2.6vw,38px);font-weight:700;line-height:1.34;letter-spacing:-.03em}
 .tile.main p{margin-top:16px;font-size:16px;font-weight:500;max-width:32em;color:rgba(255,255,255,.88)}
 .label{align-self:flex-start;display:inline-block;margin-bottom:auto;border:1px solid rgba(255,255,255,.85);padding:4px 10px;font-family:var(--display);font-size:13px;font-weight:800;background:rgba(0,0,0,.25)}
 .tile h2{font-size:clamp(20px,1.9vw,25px);font-weight:700;line-height:1.38;letter-spacing:-.02em}
@@ -55,7 +59,10 @@ strong{color:var(--ink);font-weight:700}
 .tile:hover h2{text-decoration:underline;text-underline-offset:4px}
 @media (max-width:900px){
   .bento{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
-  .tile.main{grid-row:auto;min-height:460px}
+  .tile.main{grid-row:auto;min-height:0;padding-top:min(104vw,440px)}
+  .tile.main > img{width:100%;height:min(104vw,440px);bottom:auto;object-position:50% 32%}
+  .tile.main::after{background:linear-gradient(180deg,rgba(13,13,13,0) calc(min(104vw,440px) - 120px),#0d0d0d min(104vw,440px))}
+  .tile.main h1,.tile.main p{max-width:none}
   .tile.side-a,.tile.side-b{min-height:220px}
 }
 
