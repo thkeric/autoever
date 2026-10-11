@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BudgetBills | 김태현 포트폴리오</title>
+<meta name="description" content="BudgetBills: 돈 얘기를 꺼내지 않아도 되는 정산. 에든버러대 석사 UX 디자인 과목.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="김태현 포트폴리오 처음으로">김태현</a>
+    <nav aria-label="주요 메뉴">
+      <ul class="nav">
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="thryve.html">THRYVE</a></li>
+        <li><a href="uoy.html">UOY APP</a></li>
+        <li><a href="budgetbills.html" aria-current="page">BUDGETBILLS</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="mailto:ericthk.ux@gmail.com">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="M2 4l6 5 6-5"/></svg>
+      이메일 보내기
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <a class="back" href="index.html#projects"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg>프로젝트 목록</a>
+    <article class="case" id="bb" aria-labelledby="bb-h">
+      <header class="case-head">
+        <div>
+          <p class="no">PROJECT 03</p>
+          <h2 id="bb-h">BudgetBills</h2>
+          <p class="lede">돈 얘기를 꺼내지 않아도 되는 정산</p>
+        </div>
+        <dl class="meta">
+          <dt>기간</dt><dd>2024.10 – 12</dd>
+          <dt>성격</dt><dd>에든버러대 석사 UX 디자인 과목 · 개인</dd>
+          <dt>역할</dt><dd>리서치, 정보 구조, 와이어프레임, Figma 프로토타입, 사용성 테스트</dd>
+          <dt>도구</dt><dd>Google Forms, Mural, Balsamiq, Figma</dd>
+        </dl>
+      </header>
+
+      <section class="part">
+        <h3>문제<b>정산이 어려운 이유는 계산이 아니었습니다</b></h3>
+        <div class="body">
+          <p>설문 40명(18–24세 77.5%), 인터뷰 3명, 경쟁 앱 4개(Pocketguard, YNAB, Monzo, Credit Karma)로 시작했습니다.</p>
+          <div class="facts">
+            <div class="fact"><b>47.5%</b><span>정산할 때 "돈 얘기를 꺼내기 어렵다"</span></div>
+            <div class="fact"><b>20%</b><span>정산 때문에 실제로 다툰 적이 있다</span></div>
+            <div class="fact"><b>90%</b><span>정산이 결제 수단에 연동되길 원함</span></div>
+          </div>
+          <p>다투는 사람은 적었지만, 먼저 말을 꺼내는 부담은 절반 가까이가 느꼈습니다. 또 "정산 기능"을 원하는 기능으로 고른 사람은 17.5%뿐이었지만, 90%는 정산이 결제 수단에 붙어 있길 원했습니다. 그래서 따로 떨어진 정산 앱이 아니라 지출 흐름 안에 녹아 있는 정산으로 방향을 잡았습니다.</p>
+          <div class="figs three">
+            <figure><img src="assets/bb/persona1.webp" alt="페르소나 Jonathan Kirman" width="1366" height="780" loading="lazy"></figure>
+            <figure><img src="assets/bb/persona2.webp" alt="페르소나 Molly Lee" width="1366" height="780" loading="lazy"></figure>
+            <figure><img src="assets/bb/persona3.webp" alt="페르소나 Olivia Hammond" width="1366" height="780" loading="lazy"></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="part">
+        <h3>범위와 구조<b>범위를 줄이고 화면으로 옮겼습니다</b></h3>
+        <div class="body">
+          <p>1차 정보 구조에는 리더보드, 월간 리포트, 투자, 부채 추적까지 들어 있었습니다. 1차 제출 때 받은 튜터 피드백과 4주라는 일정을 근거로 정산 중심의 4개 영역(Home · Budget · Bill · Cards)으로 줄였습니다.</p>
+          <div class="pair">
+            <figure class="figs"><img src="assets/bb/ia-v1.webp" alt="1차 정보 구조" width="1103" height="620" loading="lazy"><figcaption><strong>1차</strong> 기능을 넓게 담은 구조</figcaption></figure>
+            <div class="arrow" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14h20M17 7l7 7-7 7"/></svg></div>
+            <figure class="figs"><img src="assets/bb/ia-v2.webp" alt="정산 중심으로 줄인 정보 구조" width="1100" height="619" loading="lazy"><figcaption><strong>수정</strong> 정산 중심 4개 영역</figcaption></figure>
+          </div>
+          <p>미드파이에서 하이파이로 넘어가며 두 가지를 바꿨습니다. 인터뷰 3명이 모두 짙은 파랑·초록 계열을 선호해 짙은 청록으로 정했고, 금융 정보를 넓게 보여 주려고 하단 탭을 없앴습니다. 이 두 번째 결정이 테스트에서 문제가 됐습니다.</p>
+          <div class="phones">
+            <figure><img src="assets/bb/midfi.webp" alt="하단 탭이 있던 미드파이 화면" width="492" height="988" loading="lazy" style="--ar:492/988"><figcaption>미드파이: 하단 탭 있음</figcaption></figure>
+            <figure><img src="assets/bb/home.webp" alt="하단 탭을 없앤 하이파이 홈" width="600" height="1301" loading="lazy" style="--ar:600/1301"><figcaption>하이파이: 상단 메뉴</figcaption></figure>
+            <figure><img src="assets/bb/bill.webp" alt="친구와 정산 내역이 보이는 Bill 화면" width="600" height="1301" loading="lazy" style="--ar:600/1301"><figcaption>Bill</figcaption></figure>
+            <figure><img src="assets/bb/sendfunds.webp" alt="금액과 결제 유형을 고르는 송금 화면" width="600" height="1301" loading="lazy" style="--ar:600/1301"><figcaption>송금: 지인 / 상품·서비스</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="bb-test">
+        <h3>사용성 테스트<b>과제 6개, 도움 없이 끝냈는지로 판정했습니다</b></h3>
+        <div class="body">
+          <p>2024년 11월 28~30일, 금융 앱 경험이 적음·보통·많음인 참가자 3명과 원격(Zoom/Teams)으로 1인당 약 15분씩 진행했습니다.</p>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead><tr><th scope="col">과제</th><th scope="col">성공</th><th scope="col">발견</th></tr></thead>
+              <tbody>
+                <tr><td>챗봇 사용</td><td class="r">3 / 3</td><td>답변마다 다른 탭으로 이동해 흐름이 끊김. P3는 "My Activity가 맨 앞에 와야 한다"고 함</td></tr>
+                <tr><td>알림 켜기</td><td class="r">3 / 3</td><td>실시간 알림 화면 예시를 보고 싶어 함</td></tr>
+                <tr><td>예산 설정</td><td class="r">3 / 3</td><td>P2는 조정 도구를 처음에 찾지 못함</td></tr>
+                <tr><td>송금 (정산)</td><td class="r">3 / 3</td><td>P3는 홈 추천 영역에서 바로 송금하고 싶어 함</td></tr>
+                <tr><td>배지 보기</td><td class="r">2 / 3</td><td>리워드 패널에 배지가 있을 거라고 예상함</td></tr>
+                <tr><td>카드 추가</td><td class="r fail">0 / 3</td><td>좌상단 스캔 아이콘이 카드 추가 버튼인 줄 아무도 몰랐음</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="phones">
+            <figure><video src="assets/clip/bb-chatbot.mp4" poster="assets/clip/bb-chatbot.webp" autoplay muted loop playsinline preload="metadata" aria-label="챗봇에 질문을 고르고 입력하는 화면" style="--ar:404/828"></video><figcaption><span class="clip-tag">영상</span>챗봇</figcaption></figure>
+            <figure><video src="assets/clip/bb-split.mp4" poster="assets/clip/bb-split.webp" autoplay muted loop playsinline preload="metadata" aria-label="친구를 골라 송금을 마치는 흐름" style="--ar:404/828"></video><figcaption><span class="clip-tag">영상</span>송금 흐름</figcaption></figure>
+            <figure><video src="assets/clip/bb-addcard.mp4" poster="assets/clip/bb-addcard.webp" autoplay muted loop playsinline preload="metadata" aria-label="카드 화면에서 바코드 스캔 아이콘으로 카드를 추가하는 흐름" style="--ar:404/828"></video><figcaption><span class="clip-tag">영상</span>카드 추가 (0/3이 나온 경로)</figcaption></figure>
+            <figure><img src="assets/bb/test-notes.webp" alt="테스트 때 손으로 적은 메모" width="725" height="1024" loading="lazy" style="--ar:725/1024;object-fit:cover;background:#fff"><figcaption>테스트 메모 원본</figcaption></figure>
+          </div>
+          <p>외형 점수는 8 / 8 / 8.5였습니다. "읽기 쉽고 깔끔하지만 브랜드 개성이 없다", "아이콘 크기가 제각각이다"라는 의견도 함께 남았습니다.</p>
+        </div>
+      </section>
+
+      <section class="part">
+        <h3>원인 분석<b>테스트를 통과한 것과 문제를 푼 것은 다릅니다</b></h3>
+        <div class="body">
+          <ul class="list">
+            <li><strong>카드 추가 0/3</strong> — 하단 탭을 없애면서 카드로 가는 길이 사라졌고, 남은 진입점은 바코드 아이콘 하나였습니다. 그런데 카드에는 바코드가 없습니다. 제 머릿속의 연결이 사용자에게는 없었습니다.</li>
+            <li><strong>정산 3/3의 함정</strong> — 송금 과제는 모두 성공했지만, 과제 자체가 "먼저 달라고 말하는 부담"을 다루지 않았습니다. 리서치의 핵심 인사이트를 설계가 풀지 못한 채 테스트를 통과했습니다.</li>
+            <li><strong>홈의 우선순위</strong> — 동작하지 않는 신용점수 카드가 첫 화면을 차지해, 가장 많이 원한 실시간 지출 추적(77.5%)을 밀어냈습니다.</li>
+          </ul>
+          <p>다음에 고친다면 결제 내역에서 바로 [나누기]를 눌러 인원수대로 나누고, 앱이 부드러운 기본 문구로 대신 요청하고 리마인드하는 흐름으로 바꾸겠습니다. 카드 추가는 이름이 있는 텍스트 버튼으로 바꾸고 하단 탭을 되살리겠습니다.</p>
+          <div class="note"><b>이 직무에서</b><p>대화형 화면에서 답이 흐름을 끊지 않게 하는 일, 아이콘 하나가 뜻을 전하지 못하는 순간을 지표로 잡는 일. 생성형 AI 서비스를 운영하며 계속 마주칠 문제라고 생각합니다.</p></div>
+          <p class="fine">개선 방향은 아직 화면에 반영하거나 검증하지 않았습니다. 인물 사진은 생성 이미지이며, 일부 UI 요소는 Figma 커뮤니티 리소스를 활용했습니다.</p>
+        </div>
+      </section>
+    </article>
+
+    <section class="next" aria-labelledby="next-h">
+      <div class="row"><h2 id="next-h">다음 프로젝트</h2><a href="index.html#projects">전체 보기</a></div>
+      <a class="card" href="thryve.html">
+        <img src="assets/thryve/hero.webp" alt="" width="1170" height="849" loading="lazy">
+        <h3>THRYVE</h3>
+        <p class="sub">의지가 약한 사람도 계속 쓰는 헬스 앱</p>
+      </a>
+    </section>
+  </div>
+
+  <section class="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <h2 id="ask-h">과정이 더 궁금하시면 연락 주세요</h2>
+      <p>원본 파일과 전체 프로토타입은 면접에서 직접 보여 드릴 수 있습니다.</p>
+      <a class="cta" href="mailto:ericthk.ux@gmail.com">ericthk.ux@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="mailto:ericthk.ux@gmail.com">ericthk.ux@gmail.com</a>
+    <span>© 2026 Tae Hyun Kim</span>
+  </div>
+</footer>
+
+<a class="totop" href="#" aria-label="맨 위로">TOP</a>
+
+<script>
+  // 움직임 줄이기 설정을 켠 사용자에게는 영상을 자동 재생하지 않음
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach(function (v) {
+      v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls', '');
+    });
+  }
+</script>
+</body>
+</html>
