@@ -68,7 +68,14 @@
             <li><strong>Play for progression, not perfection</strong> — 물 한 잔, 스트레칭 한 번도 성과로 센다</li>
             <li><strong>We believe in the power of play</strong> — 경쟁이 아니라 놀이로 움직이게 한다</li>
           </ul>
-          <figure class="figs"><img src="assets/thryve/badges.webp" alt="로봇 캐릭터 배지 4단계. 배경 도형이 삼각형, 사각형, 오각형, 육각형으로 바뀐다" width="1388" height="390" loading="lazy"><figcaption>Blender로 직접 만든 배지 4단계. 숫자를 읽지 않아도 형태만으로 단계가 보이게 했습니다.</figcaption></figure>
+          <figure class="figs spin">
+            <div class="spin4" role="img" aria-label="로봇 캐릭터 배지 4단계. 로봇 뒤의 배경 도형(브론즈 삼각형, 실버 사각형, 골드 오각형, 에메랄드 육각형)이 회전하는 애니메이션">
+              <video src="assets/clip/badge1.mp4" poster="assets/clip/badge1.webp" width="440" height="384" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <video src="assets/clip/badge2.mp4" poster="assets/clip/badge2.webp" width="440" height="384" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <video src="assets/clip/badge3.mp4" poster="assets/clip/badge3.webp" width="440" height="384" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <video src="assets/clip/badge4.mp4" poster="assets/clip/badge4.webp" width="440" height="384" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+            </div>
+            <figcaption>Blender로 직접 만든 배지 4단계. 숫자를 읽지 않아도 형태만으로 단계가 보이게 했습니다.</figcaption></figure>
           <div class="tbl-wrap">
             <table class="tbl">
               <thead><tr><th scope="col">단계</th><th scope="col">로봇</th><th scope="col">테두리</th><th scope="col">배경 도형</th></tr></thead>
@@ -92,13 +99,13 @@
         <h3>검증하고 고친 것<b>원칙과 결과물이 어긋난 곳을 사용자가 먼저 찾았습니다</b></h3>
         <div class="body">
           <p>배지 시안을 Google Forms 피드백 설문으로 두 번 확인했습니다(라운드당 약 40명). 외형에 대한 인상을 묻는 방식이었고, 과제를 주고 행동을 보는 사용성 테스트는 하지 않았습니다.</p>
-          <div class="pair">
+          <div class="pair zoom">
             <figure class="figs"><img src="assets/thryve/emblem-v1.webp" alt="날개와 문장이 들어간 1차 엠블럼 배지" width="1200" height="897" loading="lazy"><figcaption><strong>1차</strong> 날개·문장이 들어간 엠블럼 배지 — "군사적으로 보인다"</figcaption></figure>
             <div class="arrow" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14h20M17 7l7 7-7 7"/></svg></div>
             <figure class="figs"><img src="assets/thryve/badges.webp" alt="로봇 캐릭터로 바꾼 배지" width="1388" height="390" loading="lazy"><figcaption><strong>수정</strong> 매니페스토의 "놀이"와 어긋난다고 보고, 로봇 캐릭터 배지로 전면 교체</figcaption></figure>
           </div>
           <p>2차 피드백에서 로봇 배지는 대체로 좋은 반응을 얻었지만, "첫 로그인·7일 로그인 배지만 따로 논다"는 지적이 나왔습니다. 두 배지를 로봇 배지와 같은 시각 언어로 다시 맞췄습니다. 아바타도 처음의 사실적인 인체 모델이 놀이라는 성격과 맞지 않아 스타일라이즈드 휴머노이드로 바꿨습니다.</p>
-          <div class="figs three">
+          <div class="figs three zoom">
             <figure class="frame"><img src="assets/thryve/avatar.webp" alt="사실적인 인체 모델에서 로봇형 휴머노이드로 바뀐 아바타" width="872" height="480" loading="lazy"><figcaption>아바타: 사실적 인체 → 휴머노이드</figcaption></figure>
             <figure class="frame"><img src="assets/thryve/login1-v1.webp" alt="선으로 그린 첫 로그인 배지 1차안" width="277" height="322" loading="lazy" style="background:#fff;object-fit:contain;aspect-ratio:4/3"><figcaption>첫 로그인 배지 1차안 — "따로 논다"</figcaption></figure>
             <figure class="phones" style="grid-template-columns:1fr"><img src="assets/thryve/login-v2.webp" alt="앱 안에서 보이는 수정된 첫 로그인 배지" width="600" height="1298" loading="lazy" style="--ar:600/1298;max-height:360px;object-fit:contain;width:auto;margin:0 auto"><figcaption style="text-align:center">수정 후 앱 화면</figcaption></figure>
@@ -110,7 +117,7 @@
         <h3>직접 빌드<b>Figma로는 입력창 같은 실제 상호작용을 볼 수 없었습니다</b></h3>
         <div class="body">
           <p>처음으로 모바일 개발을 배워 React Native로 직접 만들었습니다. Mac이 없어 Swift는 쓸 수 없었고, 하나의 코드로 iOS와 Android에 모두 올릴 수 있는 쪽을 택했습니다. Appwrite로 회원가입과 인증을 연결했고, After Effects로 만든 스플래시 애니메이션은 영상 에셋으로 넣었습니다.</p>
-          <div class="phones">
+          <div class="phones zoom">
             <figure><img src="assets/thryve/onboarding.webp" alt="온보딩 화면" width="600" height="1303" loading="lazy" style="--ar:600/1303"><figcaption>온보딩</figcaption></figure>
             <figure><img src="assets/thryve/question1.webp" alt="첫 질문: 지금 가장 중요한 건강 목표" width="600" height="1298" loading="lazy" style="--ar:600/1298"><figcaption>첫 질문 — 선택지는 설문 1~3위</figcaption></figure>
             <figure><img src="assets/thryve/question2.webp" alt="두 번째 질문: 현재 활동량" width="600" height="1298" loading="lazy" style="--ar:600/1298"><figcaption>두 번째 질문</figcaption></figure>
