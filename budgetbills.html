@@ -167,5 +167,16 @@
   }
 </script>
 <script src="assets/lightbox.js?v=10121204" defer></script>
+<!-- 방문 통계 (GoatCounter, 쿠키 없음). ?ref=… 로 들어오면 유입 경로로 기록 -->
+<script>
+  window.goatcounter = {
+    path: function () { return location.pathname.replace(/index\.html$/, ''); },
+    referrer: function () {
+      return goatcounter.get_query('ref') || goatcounter.get_query('utm_campaign') ||
+             goatcounter.get_query('utm_source') || document.referrer;
+    }
+  };
+</script>
+<script data-goatcounter="https://autoever.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
