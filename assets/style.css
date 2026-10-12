@@ -140,6 +140,10 @@ figcaption{margin-top:10px;font-size:13.5px;line-height:1.5;color:var(--body)}
 .phones figure{min-width:0}
 .phones img,.phones video{width:100%;height:auto;aspect-ratio:var(--ar,390/844);object-fit:cover;border-radius:20px;border:1px solid var(--line);background:#0b1220}
 .phones.wide{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+/* 화면 8개: 넓으면 4열, 좁으면 2열로 줄이 딱 떨어지게 */
+#thryve-build .body{container-type:inline-size}
+.phones.eight{grid-template-columns:repeat(2,1fr)}
+@container (min-width:600px){.phones.eight{grid-template-columns:repeat(4,1fr)}}
 .clip-tag{display:inline-block;margin-right:6px;padding:1px 7px;border-radius:4px;background:var(--blue-tint);color:var(--blue);font-size:11.5px;font-weight:700;vertical-align:1px}
 
 .pair{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;align-items:center}
