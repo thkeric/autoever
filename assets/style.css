@@ -245,3 +245,14 @@ html{scrollbar-gutter:stable}
   .lb-media{max-height:calc(100vh - 220px);max-height:calc(100dvh - 220px)}
 }
 @media (prefers-reduced-motion:reduce){.lb,.lb-media{transition:none}}
+
+/* 좁은 화면: 3열 표를 행마다 세로로 쌓기 */
+@media (max-width:760px){
+  .tbl.stack thead{display:none}
+  .tbl.stack,.tbl.stack tbody,.tbl.stack tr,.tbl.stack td{display:block;width:100%}
+  .tbl.stack tr{padding:14px 0;border-bottom:1px solid var(--line)}
+  .tbl.stack td{padding:3px 0;border:0}
+  .tbl.stack td:first-child{font-weight:700;color:var(--ink);margin-bottom:4px}
+  .tbl.stack td.r{white-space:normal}
+  .tbl.stack td[data-label]::before{content:attr(data-label);display:inline-block;min-width:4.6em;margin-right:6px;font-size:12px;font-weight:700;color:var(--blue)}
+}
