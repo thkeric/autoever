@@ -219,7 +219,9 @@ footer a{color:#fff;font-weight:700;font-size:17px}
 /* 클릭하면 크게 보기 (라이트박스) */
 .lb-trigger{cursor:zoom-in}
 .lb-trigger:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.lb-lock,.lb-lock body{overflow:hidden}
+/* 스크롤을 잠가도 스크롤바 자리가 그대로 남아 레이아웃이 움직이지 않게 */
+html{scrollbar-gutter:stable}
+.lb-lock{overflow:hidden}
 .lb{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:64px 80px 28px;background:rgba(10,12,16,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .2s ease}
 .lb[hidden]{display:none}
 .lb.on{opacity:1}

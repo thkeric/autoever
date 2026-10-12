@@ -69,17 +69,23 @@
     lastFocus = document.activeElement;
     render(i);
     box.hidden = false;
-    document.documentElement.classList.add('lb-lock');
+    var root = document.documentElement;
+    if (!(window.CSS && CSS.supports && CSS.supports('scrollbar-gutter: stable'))) {
+      var sb = window.innerWidth - root.clientWidth;
+      if (sb > 0) root.style.paddingRight = sb + 'px';
+    }
+    root.classList.add('lb-lock');
     requestAnimationFrame(function () { box.classList.add('on'); });
-    closeBtn.focus();
+    closeBtn.focus({ preventScroll: true });
   }
 
   function close() {
     box.classList.remove('on');
     document.documentElement.classList.remove('lb-lock');
+    document.documentElement.style.paddingRight = '';
     var done = function () { box.hidden = true; stage.innerHTML = ''; };
     if (reduce) done(); else setTimeout(done, 200);
-    if (lastFocus && lastFocus.focus) lastFocus.focus();
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
   }
 
   items.forEach(function (el, i) {
@@ -87,6 +93,8 @@
     el.setAttribute('tabindex', '0');
     el.setAttribute('role', 'button');
     if (!el.getAttribute('aria-label')) el.setAttribute('aria-label', (captionOf(el) || '이미지') + ' 크게 보기');
+    // 마우스로 누를 때 포커스 이동 때문에 페이지가 스크롤되지 않게
+    el.addEventListener('mousedown', function (e) { e.preventDefault(); });
     el.addEventListener('click', function (e) { e.preventDefault(); open(i); });
     el.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
