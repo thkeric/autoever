@@ -143,7 +143,7 @@ figcaption{margin-top:10px;font-size:13.5px;line-height:1.5;color:var(--body)}
 /* 화면 4·8·12개: 넓으면 4열, 좁으면 2열로 줄이 딱 떨어지게 */
 .part > .body{container-type:inline-size}
 .phones.quad{grid-template-columns:repeat(2,1fr)}
-@container (min-width:600px){.phones.quad{grid-template-columns:repeat(4,1fr)}}
+@container (min-width:520px){.phones.quad{grid-template-columns:repeat(4,1fr)}}
 .clip-tag{display:inline-block;margin-right:6px;padding:1px 7px;border-radius:4px;background:var(--blue-tint);color:var(--blue);font-size:11.5px;font-weight:700;vertical-align:1px}
 
 .pair{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;align-items:center}
@@ -256,3 +256,8 @@ html{scrollbar-gutter:stable}
   .tbl.stack td.r{white-space:normal}
   .tbl.stack td[data-label]::before{content:attr(data-label);display:inline-block;min-width:4.6em;margin-right:6px;font-size:12px;font-weight:700;color:var(--blue)}
 }
+
+/* 제목은 줄 길이를 고르게, 문단은 마지막 줄에 한 단어만 남지 않게 */
+.tile h1,.tile h2,.part > h3 b,.case-head .lede,.ask h2,.card .sub{text-wrap:balance}
+.intro,.body > p,figcaption{text-wrap:pretty}
+.tile h2 > span{display:block;text-wrap:balance}
