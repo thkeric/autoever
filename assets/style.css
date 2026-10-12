@@ -161,9 +161,9 @@ figcaption{margin-top:10px;font-size:13.5px;line-height:1.5;color:var(--body)}
   .pair > figure > figcaption{align-self:start}
 }
 /* 마우스를 올리면 조금 커지는 그림 */
-.zoom img{transition:transform .3s ease,box-shadow .3s ease}
-.zoom figure:hover img{transform:scale(1.06);box-shadow:0 14px 34px rgba(0,0,0,.14);position:relative;z-index:1}
-@media (prefers-reduced-motion:reduce){.zoom img{transition:none}}
+.zoom img,.zoom video{transition:transform .3s ease,box-shadow .3s ease}
+.zoom figure:hover img,.zoom figure:hover video,figure.zoom:hover img{transform:scale(1.06);box-shadow:0 14px 34px rgba(0,0,0,.14);position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){.zoom img,.zoom video{transition:none}}
 /* 배경 도형이 도는 배지 4개 */
 .spin4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;background:#fff}
 .spin4 video{width:100%;height:auto;aspect-ratio:440/384;background:#fff}
